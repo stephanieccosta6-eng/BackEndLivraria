@@ -5,6 +5,8 @@ import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
 import usarioRoutes from "./routes/usuario.routes.js";
+import livroRoutes from "./routes/livros.routes.js"
+
 // ============================
 //  Configuração do servidor
 // ============================
@@ -16,6 +18,7 @@ app.get("/", (req,res) =>{
   res.send("API funcionando");
 })
 app.use("/usuarios",usarioRoutes);
+app.use("/livros",livroRoutes)
 
 // ============================
 //  Inicia o servidor
